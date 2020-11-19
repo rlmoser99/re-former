@@ -1,0 +1,13 @@
+<h1>New User</h1>
+
+<%= form_tag("/users", method: "post") do %>
+  <%= label_tag(:email, "Email:") %>
+  <%= email_field(:user, :email) %><br><br>
+
+  <%= label_tag(:username, "Username:") %>
+  <%= text_field_tag(:username) %><br><br>
+
+  <%= label_tag(:password, "Password:") %>
+  <%= password_field_tag(:password) %><br><br>
+  <%= submit_tag("Submit") %>
+<% end %>
